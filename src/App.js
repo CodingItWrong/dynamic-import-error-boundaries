@@ -19,10 +19,10 @@ export default function App() {
         "Do Dynamic Import".
       </p>
       <p>
-        To see the dynamic import fail, load this page, stop the server, then
-        click "Do Dynamic Import". (You may have to turn off caching in your
-        browser as well so it doesn't cache that page.) When running `yarn
-        start`,
+        To see the dynamic import fail, in browser tools, find the JS request is
+        made when you do the dynamic import, then block that request. Reload the
+        page and click "Do Dynamic Import" again. You should see a message
+        starting with "This is fallback message"
       </p>
       {showFailure ? (
         <ErrorBoundary
