@@ -12,7 +12,13 @@ export default function App() {
 
   return (
     <div>
-      <h1>Hello, React</h1>
+      <h1>
+        dynamic-import-error-boundaries (
+        <a href="https://github.com/CodingItWrong/dynamic-import-error-boundaries">
+          source code
+        </a>
+        )
+      </h1>
       <p>This is the initial JS.</p>
       <p>
         To see the dynamic import succeed, keep the server running, then click
