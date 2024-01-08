@@ -1,45 +1,20 @@
-# webpack-react
+# Dynamic Import Error Boundaries
 
-A straightforward webpack template project for React and React Router.
-
-- Client-side routing handled for React Router locally and on Netlify
-- CSS saved to a CSS file via `mini-css-extract-plugin`, with hot loading of style changes locally in development
-- Static assets copied via `copy-webpack-plugin`
-- Cypress for end-to-end testing
-- CI on GitHub Actions
-- ESLint and Prettier configured
+A demonstration of using React error boundaries to handle when a dynamic import fails.
 
 ## Getting Started
 
-Clone this repo or download a zip file of it and use it to start your project.
+## Steps to Reproduce
 
-## Installation
+- Clone this repo
+- Install with `yarn install`
+- Build with `yarn build`
+- Run the production build in a server: `npx serve dist`. Note that you should *not* yet run a simple `yarn serve`; more info below
+- Go to <http://localhost:3000>
+- Kill the server
+- Click "Do Dynamic Import". Note that "This is a fallback message" is logged
 
-```bash
-yarn install
-```
-
-## Development
-
-```bash
-yarn start
-```
-
-## Testing
-
-Start the development server, then run:
-
-```bash
-yarn cypress
-```
-
-## Release
-
-```bash
-yarn build
-```
-
-Then deploy the results in the `dist` folder to a hosting provider or CDN.
+This works in production mode, which `yarn build` does. In development mode (which `yarn serve`) does, it still works, but you also get an "Uncaught runtime errors" overlay. If you close it, you will see the "This is a fallback message" displayed. There is likely a way to catch the runtime error to avoid this error in dev mode.
 
 ## License
 
