@@ -36,8 +36,7 @@ export default function App() {
           fallback={
             <div>
               This is a fallback message that displays when a dynamic import
-              fails. This one is expected, as it was for DynamicFailure.js,
-              which does not exist
+              fails.
             </div>
           }
         >
